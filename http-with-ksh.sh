@@ -1,4 +1,9 @@
 #!/bin/ksh
+#
+# Noodling around to remove the curl dependency from gpstime.sh
+#
+# Blame: helmut.doring@slug.org
+#
 
 URL='https://astroutils.astronomy.osu.edu:443/time/tai-utc.txt'
 
@@ -8,12 +13,9 @@ if [[ $URL =~ $URL_rx ]]
 then
     print "${.sh.match[1]} | ${.sh.match[2]} | ${.sh.match[3]} | ${.sh.match[4]} | ${.sh.match[5]} | ${.sh.match[6]} | ${.sh.match[7]}"
 fi
-#exit
 
-#exec 5<> /dev/tcp/myhost.com/80
-## Flush input
-#cat <&5 &
-#printf "GET /getuser/Default.aspx?username=b772643 HTTP/1.0\r\n\r\n" >&5
+# Uncomment to test regex
+#exit
 
 HOST='astroutils.astronomy.osu.edu'
 URI='/time/tai-utc.txt'
