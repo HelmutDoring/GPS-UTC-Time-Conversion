@@ -11,7 +11,7 @@
 #
 # Makes use of the canonical leapseconds file:
 #
-#    https://astroutils.astronomy.osu.edu/time/tai-utc.txt
+#    https://maia.usno.navy.mil/ser7/tai-utc.dat
 #
 # Requires the curl command: https://curl.haxx.se
 # though it can be hand primed with a copy of the
@@ -41,7 +41,7 @@ cache="$TMPDIR/tai-utc.dat"
 # expected size of file (-1 byte vs string)
 typeset -i min_cache_size=3320
 
-time_url='https://astroutils.astronomy.osu.edu/time/tai-utc.txt'
+time_url='https://maia.usno.navy.mil/ser7/tai-utc.dat'
 http_cmd='/usr/bin/curl -k -s'
 utc_cmd='/bin/date +%s --utc -d'
 stat_cmd='/usr/bin/stat --format "%s %Y"'
