@@ -5,7 +5,7 @@
 # Blame: helmut.doring@slug.org
 #
 
-URL='https://astroutils.astronomy.osu.edu:443/time/tai-utc.txt'
+URL='https://maia.usno.navy.mil/ser7/tai-utc.dat'
 
 URL_rx='(?:([^\:]*)\:\/\/)?(?:([^\:\@]*)(?:\:([^\@]*))?\@)?(?:([^\/\:]*))?(?:\:([0-9]*))?\/(\/[^\?#]*(?=.*?\/)\/)?([^\?#]*)?(?:\?([^#]*))?(?:#(.*))?'
 
@@ -17,8 +17,8 @@ fi
 # Uncomment to test regex
 #exit
 
-HOST='astroutils.astronomy.osu.edu'
-URI='/time/tai-utc.txt'
+HOST='https://maia.usno.navy.mil'
+URI='/ser7/tai-utc.dat'
 PORT='443'
 OUTFILE='tai-utc.txt'
 
